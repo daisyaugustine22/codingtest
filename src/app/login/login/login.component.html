@@ -1,0 +1,17 @@
+<div>
+    <form>
+        <div [formGroup]="form">
+            <div>
+                <label>Username</label>
+                <input formControlName="username" type="text" />
+            </div>
+            <div>
+                <label>Password</label>
+                <input formControlName="password" type="password" />
+            </div>
+        </div>
+    </form>
+    <div>
+        <button type="button" (click)="submit()">Login</button>
+    </div>
+</div>

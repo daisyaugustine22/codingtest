@@ -1,0 +1,44 @@
+<div class="user">
+    <form>
+        <div [formGroup]="form">
+            <div class="element-wrapper">
+                <label class="input-label">Gender</label>
+                <select formControlName="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div formGroupName="name" class="element-wrapper">
+                <label class="input-label">Name</label>
+                <select formControlName="title">
+                    <option value="miss">Miss</option>
+                    <option value="mr">Mr</option>
+                    <option value="mrs">Mrs</option>
+                </select>
+                <input type="text" formControlName="first" />
+                <input type="text" formControlName="last" />
+            </div>
+            <div class="element-wrapper">
+                <label class="input-label">Email</label>
+                <input type="text" formControlName="email" />
+            </div>
+            <div class="element-wrapper">
+                <label class="input-label">Username</label>
+                <input type="text" formControlName="username" />
+            </div>
+            <div class="element-wrapper">
+                <label class="input-label">Password</label>
+                <input type="text" formControlName="password" />
+            </div>
+            <div class="element-wrapper">
+                <label class="input-label">DOB</label>
+                <input type="date" formControlName="dob" />
+            </div>
+            <div class="element-wrapper">
+                <label class="input-label">Phone</label>
+                <input type="text" formControlName="phone" />
+            </div>
+        </div>
+    </form>
+    <button (click)="submit()">Submit</button>
+</div>

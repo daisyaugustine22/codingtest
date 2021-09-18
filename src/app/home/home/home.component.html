@@ -1,0 +1,13 @@
+<div *ngIf="!addUser" class="home">
+    <table>
+        <td>Name
+            <tr *ngFor="let user of users">{{user?.user?.name?.title | uppercase}}.{{user?.user?.name?.first}}
+                {{user?.user?.name?.last}}</tr>
+        </td>
+        <td>Gender
+            <tr *ngFor="let user of users">{{user?.user?.gender}}</tr>
+        </td>
+    </table>
+    <button (click)="addUser = !addUser">Add New User</button>
+</div>
+<app-user *ngIf="addUser" (formData)="onUserAdd($event)"></app-user>
